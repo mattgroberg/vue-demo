@@ -3,12 +3,11 @@ import contact from './Contact.vue';
 const meta: Meta<typeof contact> = {
     title: 'Contacts/Contact',
     component: contact,
-    tags: ['autodocs'],
     args: {
-        contact: {
+        modelValue: {
             id: 1,
             name: 'John Doe',
-            email: ''
+            email: 'john.doe@gmail.com'
         }
     }
 };
@@ -17,3 +16,8 @@ export default meta;
 
 type Story = StoryObj<typeof contact>;
 export const Default: Story = {};
+export const Editing: Story = {
+    args: {
+        editing: true
+    }
+};
