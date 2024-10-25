@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import {RouterView } from 'vue-router'
-import Navbar from './components/Navbar.vue'
+import { RouterView } from 'vue-router';
+import Navbar from './components/Navbar/Navbar.vue';
 </script>
-
 <template>
-  <Navbar />
-  <RouterView />
+  <div class="app">
+    <Navbar />
+    <div class="appBody">
+      <RouterView />
+    </div>
+  </div>
 </template>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-<style scoped>
-
+.appBody {
+  padding: 1rem;
+}
 </style>

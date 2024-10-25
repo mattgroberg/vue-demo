@@ -1,13 +1,9 @@
 <script setup lang='ts'>
 
 </script>
-
 <template>
-    <div class='Home'>
-        Home
-    </div>
+    <div class='Landing'> Landing </div>
 </template>
-
 <style scoped>
-
+.Landing {}
 </style>
