@@ -3,9 +3,13 @@ import { ref } from 'vue';
 import ContactList from '../ContactList/ContactList.vue';
 import Spinner from '@/components/Icons/Spinner.vue';
 import Alert from '@/components/shared/Alert/Alert.vue';
-const props = defineProps<{
-    user: User;
-}>();
+import { authStore } from '@/stores/authStore';
+import { storeToRefs } from 'pinia';
+
+const { userInfo } = storeToRefs(authStore());
+// const props = defineProps<{
+//     user: User;
+// }>();
 
 const loading = ref(false);
 const contacts = ref<Contact[]>([]);
@@ -70,7 +74,7 @@ async function loadContacts() {
 function setGreeting() {
     currentAlert.value = {
         type: 'info',
-        message: `Welcome back, ${props.user.name}!`,
+        message: `Welcome back, ${userInfo.value.name}!`,
     };
 }
 

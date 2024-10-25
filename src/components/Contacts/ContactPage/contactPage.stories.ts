@@ -4,10 +4,7 @@ const meta: Meta<typeof ContactPage> = {
     title: 'Contacts/ContactPage',
     component: ContactPage,
     args: {
-        user: {
-            name: 'John Doe',
-            id: 1
-        }
+
     },
     parameters: {
         mockData: [
