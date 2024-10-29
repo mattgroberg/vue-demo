@@ -2,7 +2,9 @@
 
 </script>
 <template>
-    <div class='Landing'> Landing </div>
+    <div class='Landing'>
+        This is the landing page
+    </div>
 </template>
 <style scoped>
 .Landing {}
